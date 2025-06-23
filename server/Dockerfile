@@ -16,7 +16,7 @@ RUN npm install
 RUN npx tsc
 
 # Expone el puerto donde corre tu API (asegúrate que coincide con tu app, p.ej., 3001)
-EXPOSE 3000
+EXPOSE 3002
 
 # Comando para desarrollo (puedes cambiar por otro si usas build separado)
 CMD ["node", "dist/index.js"]
