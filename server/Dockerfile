@@ -13,9 +13,10 @@ ENV npm_config_unsafe_perm=true
 RUN npm install -g esbuild
 RUN npm install
 
+RUN npx tsc
 
 # Expone el puerto donde corre tu API (asegúrate que coincide con tu app, p.ej., 3001)
 EXPOSE 3000
 
 # Comando para desarrollo (puedes cambiar por otro si usas build separado)
-CMD ["npx", "nodemon", "--exec", "ts-node", "src/index.ts"]
+CMD ["node", "dist/index.js"]
